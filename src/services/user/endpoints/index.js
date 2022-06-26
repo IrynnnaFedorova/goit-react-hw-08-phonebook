@@ -1,1 +1,0 @@
-export { endpoitsUsers } from './endpoints';
