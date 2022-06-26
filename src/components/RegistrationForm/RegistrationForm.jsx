@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '../Button';
 import c from './RegistrationForm.module.css';
-import { authOperations } from 'redux/auth';
+import { authOperations } from '../../redux/auth';
 
 const RegistrationForm = () => {
   const [name, setName] = useState('');

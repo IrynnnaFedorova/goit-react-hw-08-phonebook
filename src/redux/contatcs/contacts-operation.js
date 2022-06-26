@@ -6,7 +6,7 @@ import {
   fetchDeleteContact,
   fetchGetContacts,
   fetchUpdateContact,
-} from 'services/contacts/API/contactFetchAPI';
+} from '../../services/contacts/API/contactFetchAPI';
 
 export const addContact = createAsyncThunk(
   'contact/add',

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { authSelectors } from 'redux/auth';
-import { contactsOperations } from 'redux/contatcs';
+import { authSelectors } from '../../redux/auth';
+import { contactsOperations } from '../../redux/contatcs';
 import PropTypes from 'prop-types';
 import c from './UpdateForm.module.css';
-import Button from 'components/Button';
+import Button from '../../components/Button';
 import { useLocation } from 'react-router-dom';
 
 const UpdateForm = ({ onCloseModal }) => {

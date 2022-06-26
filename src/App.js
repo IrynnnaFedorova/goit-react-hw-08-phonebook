@@ -1,24 +1,24 @@
 import { useDispatch } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 
 import { routes } from './routes';
-import { authOperations } from 'redux/auth';
-import { contactsSelectors, contactsOperations } from 'redux/contatcs';
-import PrivateRoute from 'components/UserMenu/Routes/PrivateRoute';
-import PublicRoute from 'components/UserMenu/Routes/PublicRoute';
+import { authOperations } from './redux/auth';
+import { contactsSelectors, contactsOperations } from './redux/contatcs';
+import PrivateRoute from './components/UserMenu/Routes/PrivateRoute';
+import PublicRoute from './components/UserMenu/Routes/PublicRoute';
 
 import AppBar from './components/AppBar';
 import Container from './components/Container';
-import Modal from 'components/Modal';
-import UpdateForm from 'components/UpdateForm';
-import MyLoader from 'components/MyLoader';
+import Modal from './components/Modal';
+import UpdateForm from './components/UpdateForm';
+//import MyLoader from './components/MyLoader';//
 
 import './styles/styles.css';
 import 'react-toastify/dist/ReactToastify.css';
-import { useHistory } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 const LoginView = lazy(() =>
@@ -39,7 +39,7 @@ const App = () => {
   const isModalOpen = useSelector(contactsSelectors.getStateModal);
 
   const dispatch = useDispatch();
-  const history = useHistory();
+  const history = MemoryRouter();
   const location = useLocation();
 
   const onCloseModal = () => {
@@ -55,8 +55,8 @@ const App = () => {
     <>
       <AppBar />
       <Container>
-        <Suspense fallback={<MyLoader />}>
-          <Switch>
+        <Suspense fallback={<></>}>
+          <Routes>
             <PublicRoute
               path={routes.register}
               exact
@@ -84,7 +84,7 @@ const App = () => {
             </PublicRoute>
 
             <Route component={HomeView} />
-          </Switch>
+          </Routes>
         </Suspense>
       </Container>
       {isModalOpen && (

@@ -4,7 +4,7 @@ import {
   fetchLogin,
   fetchLogout,
   fetchGetUser,
-} from 'services/user/API/userFetchAPI';
+} from '../../services/user/API/userFetchAPI';
 
 export const register = createAsyncThunk('auth/register', async data => {
   try {

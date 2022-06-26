@@ -7,7 +7,7 @@ import {
   stateModal,
   updateContact,
 } from './contacts-operation';
-import { logOut } from 'redux/auth/auth-operation';
+import { logOut } from '../../redux/auth/auth-operation';
 
 const initialState = { items: [], filter: '', isModalOpen: false };
 

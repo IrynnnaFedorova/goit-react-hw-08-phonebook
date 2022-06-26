@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '../Button';
 import c from './UserMenu.module.css';
-import { authOperations, authSelectors } from 'redux/auth';
+import { authOperations, authSelectors } from '../../redux/auth';
 
 const UserMenu = () => {
   const token = useSelector(authSelectors.getToken);

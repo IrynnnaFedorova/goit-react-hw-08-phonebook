@@ -1,6 +1,6 @@
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { authSelectors } from 'redux/auth';
+import { authSelectors } from '../../../redux/auth';
 import PropTypes from 'prop-types';
 import { any } from 'prop-types';
 
@@ -15,7 +15,7 @@ const PublicRoute = ({
 
   return (
     <Route {...routeProps}>
-      {shouldRedirect ? <Redirect to={redirectTo} /> : children}
+      {shouldRedirect ? <Navigate to={redirectTo} /> : children}
     </Route>
   );
 };

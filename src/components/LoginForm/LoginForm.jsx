@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/auth-operation';
+import { logIn } from '../../redux/auth/auth-operation';
 import Button from '../Button';
 
 import c from './LoginForm.module.css';

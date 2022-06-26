@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ContactListItem from '../ContactListItem';
-import { contactsOperations, contactsSelectors } from 'redux/contatcs';
-import { authSelectors } from 'redux/auth';
+import { contactsOperations, contactsSelectors } from '../../redux/contatcs';
+import { authSelectors } from '../../redux/auth';
 import c from './ContactList.module.css';
 
 const ContactList = () => {

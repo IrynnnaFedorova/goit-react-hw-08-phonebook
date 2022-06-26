@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Button from '../Button';
-import { contactsOperations } from 'redux/contatcs';
+import { contactsOperations } from '../../redux/contatcs';
 import c from './ContactListItem.module.css';
 
 const ContactListItem = ({ name, number, id, token }) => {

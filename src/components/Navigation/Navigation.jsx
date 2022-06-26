@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { authSelectors } from 'redux/auth';
+import { authSelectors } from '../../redux/auth';
 import PropTypes from 'prop-types';
 import c from './Navigation.module.css';
 import { arrayOf } from 'prop-types';

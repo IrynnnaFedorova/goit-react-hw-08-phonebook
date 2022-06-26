@@ -1,9 +1,9 @@
-import Button from 'components/Button';
+import Button from '../../components/Button';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import c from './ContactForm.module.css';
-import { contactsOperations, contactsSelectors } from 'redux/contatcs';
-import { authSelectors } from 'redux/auth';
+import { contactsOperations, contactsSelectors } from '../../redux/contatcs';
+import { authSelectors } from '../../redux/auth';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
