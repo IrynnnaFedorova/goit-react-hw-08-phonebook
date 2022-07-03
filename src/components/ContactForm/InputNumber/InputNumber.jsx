@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import PhoneField from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
-
+import PhoneField from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+// import s from './InputNumber.module.css';
 
 const InputNumber = ({ phone, onNumberChange}) => {
   return <PhoneField
     type="tel"
     name="phone"
     country={'ua'}
-    placeholder={'+code of country ( phone operator) 000 00 00'}
+    placeholder={'+380 (50) 000 00 00'}
     autoFocus={false}
     value={phone}
     onChange={onNumberChange}
